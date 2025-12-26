@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeGuard Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>CodeGuard – Code Review Dashboard</h1>
+    <a href="/scan" class="btn">Run Code Scan</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Issue</th>
+            <th>Status</th>
+        </tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{t[0]}}</td>
+            <td>{{t[1]}}</td>
+            <td>{{t[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
